@@ -10,7 +10,7 @@
               <span class="block xl:inline bg-gradient-to-r text-transparent bg-clip-text from-blue-500 to-nicolaudie-second">d'interface SLESA</span>
             </h1>
             <p class="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+              {{ chucknorris }}
             </p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-md shadow">
@@ -36,11 +36,36 @@
 
 <script>
 import RolexWatch from '@/components/RolexWatch.vue'
+import axios from 'axios'
+
+const urlChuckNorris = 'https://api.icndb.com/jokes/random'
 
 export default {
   name: 'Home',
   components: {
     RolexWatch,
   },
+  data() {
+    return {
+      chucknorris: null
+    }
+  },
+  mounted() {
+    this.getChuckNorris()
+
+    window.setInterval(() => {
+      this.getChuckNorris()
+    }, 2000)
+  },
+  methods: {
+    getChuckNorris() {
+      this.$nextTick(() => {
+        axios.get(urlChuckNorris)
+          .then(response => {
+            this.chucknorris = response.data.value.joke
+          })
+      });
+    }
+  }
 }
 </script>

@@ -21,6 +21,9 @@
           <router-link :to="{ path: 'meteo' }" class="text-base font-medium text-nicolaudie-second hover:text-white">
             Météo
           </router-link>
+          <router-link :to="{ path: 'neows' }" class="text-base font-medium text-nicolaudie-second hover:text-white">
+            NeoWs
+          </router-link>
         </div>
       </div>
     </div>
@@ -64,6 +67,7 @@ import {
   AnnotationIcon,
   GlobeIcon,
   MenuIcon,
+  SparklesIcon,
   XIcon,
 } from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
@@ -71,21 +75,27 @@ import { ChevronDownIcon } from '@heroicons/vue/solid'
 const solutions = [
   {
     name: 'Home',
-    description: 'Get a better understanding of where your traffic is coming from.',
+    description: 'Home',
     href: '/',
     icon: HomeIcon,
   },
   {
     name: 'Médias',
-    description: 'Speak directly to your customers in a more meaningful way.',
+    description: 'Médias',
     href: '/medias',
     icon: AnnotationIcon,
   },
   {
     name: 'Météo',
-    description: "Your customers' data will be safe and secure.",
+    description: "Météo",
     href: '/meteo',
     icon: GlobeIcon
+  },
+  {
+    name: 'NeoWs',
+    description: "NeoWs",
+    href: '/neows',
+    icon: SparklesIcon
   },
 ]
 

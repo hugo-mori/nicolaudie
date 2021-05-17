@@ -17,6 +17,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch("getInfo");
-  }
+  },
 }
 </script>

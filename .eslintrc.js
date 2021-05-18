@@ -7,12 +7,7 @@ module.exports = {
     parser: 'babel-eslint',
     sourceType: 'module',
   },
-  extends: [
-    'airbnb-base',
-    'plugin:vue/vue3-essential',
-    'prettier/vue',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['plugin:prettier/recommended'],
   rules: {
     'comma-dangle': 'off',
     'class-methods-use-this': 'off',
@@ -20,9 +15,13 @@ module.exports = {
     'import/extensions': 'off',
     'implicit-arrow-linebreak': 'off',
     'import/prefer-default-export': 'off',
-    "vue/component-name-in-template-casing": ["error", "kebab-case", {
-      "ignores": []
-    }],
-    'prettier/prettier': ['error', { 'singleQuote': true, 'endOfLine': 'auto' }]
+    'vue/component-name-in-template-casing': [
+      'error',
+      'kebab-case',
+      {
+        ignores: [],
+      },
+    ],
+    'prettier/prettier': ['error', { singleQuote: true, endOfLine: 'auto' }],
   },
-};
+}

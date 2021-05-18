@@ -16,7 +16,7 @@ export default {
     Header,
   },
   mounted() {
-    this.$store.dispatch("getInfo");
+    this.$store.dispatch('getInfo')
   },
 }
 </script>

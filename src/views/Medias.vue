@@ -10,7 +10,7 @@ import DisplayMedia from '@/components/DisplayMedia.vue'
 export default {
   name: 'Medias',
   components: {
-    DisplayMedia
+    DisplayMedia,
   },
 }
 </script>

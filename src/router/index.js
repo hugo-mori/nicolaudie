@@ -5,31 +5,31 @@ import Meteo from '../views/Meteo.vue'
 import NeoWs from '../views/NeoWs.vue'
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/medias',
-    name: 'Medias',
-    component: Medias
-  },
-  {
-    path: '/meteo',
-    name: 'Meteo',
-    component: Meteo
-  },
-  {
-    path: '/neows',
-    name: 'NeoWs',
-    component: NeoWs
-  }
+	{
+		path: '/',
+		name: 'Home',
+		component: Home,
+	},
+	{
+		path: '/medias',
+		name: 'Medias',
+		component: Medias,
+	},
+	{
+		path: '/meteo',
+		name: 'Meteo',
+		component: Meteo,
+	},
+	{
+		path: '/neows',
+		name: 'NeoWs',
+		component: NeoWs,
+	},
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+	history: createWebHistory(process.env.BASE_URL),
+	routes,
 })
 
 export default router
